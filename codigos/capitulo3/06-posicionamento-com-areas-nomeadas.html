@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link href="../css/estilos.css" rel="stylesheet">
+<style rel="stylesheet">
+.container {
+	display: grid;
+	grid-template-rows: 60px 40px 200px 60px;
+	grid-template-areas: 
+			"topo     topo      topo"
+			"menu     menu      menu"
+			"primaria principal secundaria"
+			"rodape   rodape    rodape";
+	grid-gap: 5px 10px;
+}
+
+.topo { grid-area: topo;}
+.menu { grid-area: menu;}
+.principal { grid-area: principal;}
+.primaria { grid-area: primaria;}
+.secundaria { grid-area: secundaria;}
+.rodape { grid-area: rodape;}
+</style>
+</head>
+<body>
+<div class="container">
+	<header class="topo">Topo</header>
+	<nav class="menu">Menu</nav>
+	<main class="principal">Principal</main>
+	<aside class="primaria">Primária</aside>
+	<aside class="secundaria">Secundária</aside>
+	<footer class="rodape">Rodapé</footer>
+</div>
+</body>
+</html>

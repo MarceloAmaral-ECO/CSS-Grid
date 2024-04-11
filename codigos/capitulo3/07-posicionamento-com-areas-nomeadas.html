@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link href="../css/main.css" rel="stylesheet">
+<style rel="stylesheet">
+.container {
+	display: grid;
+	grid-template-areas: 
+			"nome1     nome2      nome3"
+			"nome4     nome4      nome3";
+	grid-gap: 10px;
+}
+
+.box1 { grid-area: nome1;}
+.box2 { grid-area: nome2;}
+.box3 { grid-area: nome3;}
+.box4 { grid-area: nome4;}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="box box1">Box1</div>
+	<div class="box box2">Box2</div>
+	<div class="box box3">Box3</div>
+	<div class="box box4">Box4</div>
+</div>
+</body>
+</html>

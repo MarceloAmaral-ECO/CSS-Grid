@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<style rel="stylesheet">
+.container { 
+	display: flex;
+	height: 300px;
+}
+</style>
+</head>
+<body>
+<h1>Interface interativa Flexbox do livro Grid Layout do Maujor</h1>
+<div class="selecao">
+    <p>Escolha um valor para a propriedade <code>align-self</code> do DIV 3<br>
+    O valor padrão é <code>auto</code></p>
+        <select id="escolher">
+            <option value="auto" selected>auto</option>
+            <option value="stretch">stretch</option>
+            <option value="flex-start">flex-start</option>
+            <option value="center">center</option>
+            <option value="flex-end">flex-end</option>
+            <option value="baseline">baseline</option>
+        </select>	
+</div>    
+    
+<div class="container">
+	<div class="box box1">DIV1</div>
+	<div class="box box2">DIV2</div>
+	<div class="box box3">DIV3</div>
+	<div class="box box4">DIV4</div>
+</div>
+
+<div class="fixo">  
+    <h2>Legenda</h2>
+    <div class="fc">flex-container</div>
+    <br>
+    <div class="fi">flex-items</div>
+</div>
+
+<script type="text/javascript" src="js/interativo.js"></script>
+<script type="text/javascript">
+var flexitem = document.getElementsByClassName("box3")[0];
+escolher.onchange = function() {
+	valor = this.value;
+	flexitem.style.alignSelf = valor;
+}
+</script>    
+</body>
+</html>

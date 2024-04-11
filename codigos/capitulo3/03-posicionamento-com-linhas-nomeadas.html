@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link href="../css/estilos.css" rel="stylesheet">
+<style rel="stylesheet">
+.container {
+	display: grid;
+	grid-template-columns: 
+		[inicio] 150px [f-primaria i-principal] 700px [f-principal i-secundaria] 150px [fim];	
+	grid-template-rows: 
+		[inicio] 60px [f-topo i-menu] 40px [f-menu i-3col] 200px [f-3col i-rodape] 60px [fim];
+	grid-gap: 5px 10px;
+}
+.topo {grid-area: inicio / inicio / f-topo / fim;}
+.menu {grid-area: i-menu / inicio / f-menu / fim;}
+.principal {grid-area: i-3col / i-principal / f-3col / f-principal;}
+.primaria {grid-area: i-3col / inicio / f-3col / f-primaria;}
+.secundaria {grid-area: i-3col / i-secundaria / f-3col / fim;}
+.rodape {grid-area: i-rodape / inicio / fim / fim;}   
+</style>
+</head>
+<body>
+<div class="container">
+	<header class="topo">Topo</header>
+	<nav class="menu">Menu</nav>
+	<main class="principal">Principal</main>
+	<aside class="primaria">Primária</aside>
+	<aside class="secundaria">Secundária</aside>
+	<footer class="rodape">Rodapé</footer>
+</div>
+</body>
+</html>

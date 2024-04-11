@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link href="../css/main.css" rel="stylesheet">
+<style rel="stylesheet">
+.container {
+	display: grid;
+	grid-template-columns: repeat(6, 100px);
+	grid-template-rows: repeat(4, 60px);
+	grid-gap: 5px;
+}
+.area1 {
+	grid-column: 2 / span 4;
+}
+.area2 {
+	grid-row: 3 / span 2;
+}
+.area3 {
+	grid-column: 3 / span 4;
+	grid-row: 3 / span 2; 
+}
+</style>
+</head>
+<body>
+	<div class="container">
+    	<div class="box box1 area1">Área1</div>
+    	<div class="box box2 area2">Área2</div>
+    	<div class="box box3 area3">Área3</div>
+    </div>
+</body>
+</html>

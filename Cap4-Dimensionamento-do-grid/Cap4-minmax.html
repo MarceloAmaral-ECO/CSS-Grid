@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função min max</title>
+
+    <link rel="stylesheet" href="../codigos/css/estilos.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px minmax(200px, 1fr) 200px;
+            grid-template-rows: 50px minmax(200px, auto) 50px;
+            gap: 10px 20px;
+        }
+
+        .topo {grid-area: 1 / 1 / 2 / 4;}
+        .rodape {grid-area: 3 / 1 / 4 / 4;}
+        .principal {grid-area: 2 / 2 / 3 / 3;}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header class="topo">Topo</header>
+        <main class="principal">Principal</main>
+        <aside class="primaria">Primária</aside>
+        <aside class="secundaria">Secundária</aside>
+        <footer class="rodape">Rodapé</footer>
+    </div>
+</body>
+</html>

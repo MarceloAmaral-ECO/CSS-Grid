@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<style rel="stylesheet">
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 100px 100px;
+	grid-gap: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container"> 
+	<section>Conteúdos</section>
+	<h1>Título nível 1</h1>
+	<p>Parágrafo</p>
+	Texto dentro do container
+	<span>
+		Lorem ipsum
+		<em style="display: block">dolor sit</em>
+		<strong>amet,</strong>
+        <i>consectetuer adipiscing elit.</i>
+	</span>
+    <!-- espaço em branco -->
+	<div style="float: right"><p>FLOAT</p></div>
+</div>
+</body>
+</html>
