@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit Line Names</title>
+    <link rel="stylesheet" href="../codigos/css/main.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 
+            "topo       topo        topo"
+            "menu       conteudo        auxiliar"
+            "rodape     rodape      rodape";
+            grid-template-rows: 90px 40vh 120px;
+            grid-template-columns: 200px minmax(250px, 1fr) 200px;
+            gap: 2px;
+        }
+
+        .container > * {
+            background: #4aa1c9;
+            border-radius: 6px;
+            color: #fff;
+            padding: 20px;
+        }
+
+        header {
+            grid-row: topo-start / topo-end;
+            grid-column: topo-start / topo-end;
+        }
+
+        main {
+            grid-row: conteudo-start / conteudo-end;
+            grid-column: conteudo-start / conteudo-end;
+        }
+
+        nav {
+            grid-row: menu-start / menu-end;
+            grid-column: menu-start / menu-end;
+        }
+
+        aside { grid-area: auxiliar; }
+
+        footer {
+            grid-area: rodape-start / rodape-start / rodape-end / rodape-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Topo</header>
+        <main>Conteúdo</main>
+        <nav>Menu</nav>
+        <aside>Auxiliar</aside>
+        <footer>Rodapé</footer>
+    </div>
+</body>
+</html>

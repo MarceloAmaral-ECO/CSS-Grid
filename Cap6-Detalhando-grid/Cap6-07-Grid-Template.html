@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <link rel="stylesheet" href="../codigos/css/main.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template: 
+            "topo       topo        topo " 90px
+            "menu       conteudo        auxiliar" 40vh
+            "rodape     rodape      rodape" 120px / 200px minmax(300px, 1fr) 200px;
+            gap: 2px;
+        }
+
+        .container > * {
+            background: #4aa1c9;
+            border-radius: 6px;
+            color: #fff;
+            padding: 20px;
+        }
+    
+        header {grid-area: topo;}
+        main {grid-area: conteudo;}
+        nav {grid-area: menu;}
+        aside {grid-area: auxiliar;}
+        footer {grid-area: rodape;}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Topo</header>
+        <main>Conteúdo</main>
+        <nav>Menu</nav>
+        <aside>Auxiliar</aside>
+        <footer>Rodapé</footer>
+    </div>
+</body>
+</html>
